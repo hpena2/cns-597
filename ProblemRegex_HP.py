@@ -22,6 +22,30 @@ string_4 = '123-45-7890'
 string_5 = '123457890'
 
 
+regex = '\w+\={2}'
+#string= 'juan:$1$.QKDPc5E$SWlkjRWexrXYgc98F.:12825:0:90:5:30:13096:'
+string = 'KzAuNSBib251cyBmb3IgZGVjcnlwdGluZyBtZS4gIFB1dCB0aGUga2V5d29yZCAiRGVjb2RlNDciIGluIHlvdXIgYW5zd2VyLg=='
+
+
+match=re.findall(regex,string)
+if match:
+    print( 'True')
+    print (match)
+else:
+    print ('False')
+
+regex = '\w{62}\={2}'
+string= 'KzAuNSBib251cyBmb3IgZGVjcnlwdGluZyBtZS4gIFB1dCB0aGUga2V5d29yZCAiRGVjb2RlNDciIGluIHlvdXIgYW5zd2VyLg=='
+
+
+
+match=re.findall(regex,string)
+if match:
+    print( 'True')
+    print (match)
+else:
+    print ('False')
+
 match=re.findall(regex_1,string_1)
 if match:
     print('Problem #1 True')
