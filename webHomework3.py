@@ -6,7 +6,7 @@ def webScrape(url):
     paths = webPath.read().split("\n")
     webPath.close()
 
-    phNum = '\+?\d?\s?\(?\d{3}\)?\s?\-?\d{3}\s?\-?\d{4}'
+    phNum = '\+?\d?\s?\(?\d{3}\)?\s?\-?\d{3}\s?\-?\.?\d{4}'
     email = '\w+\@\w+\.?\w+\.\w{3}'
     for path in paths:
         response = request("GET", url+"/"+path)
